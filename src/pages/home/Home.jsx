@@ -11,9 +11,9 @@ const socket=io('http://localhost:3001')
 const InputElement=()=>{
     const {state,dispatch}=useContext(UserData)
 
-    async function logout(){
-        dispatch({type:"USER",name:'',room:'',payload:false})
-        await socket.disconnect()
+    function logout(){
+        dispatch({type:"USER",name:'',email:'',room:'',payload:false})
+        window.location.reload()
     }
 
     if(state.payload){
@@ -21,6 +21,8 @@ const InputElement=()=>{
             <div className="col-md-6 col-12">
                 <div className='ssfd'>
                     <button className='bdv mt-1' type='button' onClick={logout}>Logout</button>
+                    <span id='code'>CODE: <input type={'text'} value={state.room}  id='rid' readOnly/></span>
+                    <span id='uname'>{state.name}</span>
                 </div>
                 
                 <InputMessage socket={socket}/>
@@ -29,7 +31,10 @@ const InputElement=()=>{
         )
     }
     else{
-        return <div className="col-md-6 col-12"><Login socket={socket} /></div>
+        return( <div className="col-md-6 col-12">
+                
+                <Login socket={socket} /></div>
+        )
     }
 }
 

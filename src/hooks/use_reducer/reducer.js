@@ -1,6 +1,7 @@
-export const initialState={type:"USER",name:'',room:'',payload:false}
+export const initialState={type:"USER",name:'',email:'',room:'',payload:false}
 
 export default function reducer(state,action){
+    
     if(action.type === "USER"){
         return action
     }

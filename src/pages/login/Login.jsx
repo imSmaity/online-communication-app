@@ -4,7 +4,7 @@ import React, { useContext, useRef, useState } from 'react'
 import { UserData } from '../../Routes/PageRoutes'
 
 export default function Login({socket}) {
-    const {state,dispatch}=useContext(UserData)
+    const {dispatch}=useContext(UserData)
     const [joinRoom,setJoinRoom]=useState(null)
 
     const name=useRef(null)

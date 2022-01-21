@@ -3,10 +3,9 @@ import { UserData } from "../../../Routes/PageRoutes"
 
 
 export default function InputMessage({socket}){
-    // const [currMessage,setCurrMessage]=useState([])
     const [messageList,setmessageList]=useState([])
     const [sendMsg,setSendMsg]=useState("")
-    const {state,dispatch}=useContext(UserData)
+    const {state}=useContext(UserData)
 
     function changeMsg(e){
         setSendMsg(e.target.value)

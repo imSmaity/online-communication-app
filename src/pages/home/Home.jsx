@@ -1,12 +1,12 @@
 
 import './home.css'
-import {io, Socket} from 'socket.io-client'
+import {io} from 'socket.io-client'
 import InputMessage from './chat/InputMessage'
 import Login from '../login/Login'
 import { useContext } from 'react'
 import { UserData } from '../../Routes/PageRoutes'
 
-const socket=io('https://bartaserver2.herokuapp.com/')
+const socket=io('https://bartaserver2.herokuapp.com')
 
 const InputElement=()=>{
     const {state,dispatch}=useContext(UserData)

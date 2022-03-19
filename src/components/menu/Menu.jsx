@@ -4,7 +4,7 @@ import { UserData } from '../../Routes/PageRoutes'
 import './menu.css'
 
 export default function Menu(){
-    const {state,dispatch}=useContext(UserData)
+    const {dispatch}=useContext(UserData)
     function logout(){
         dispatch({type:"",name:'',room:'',payload:false})
     }

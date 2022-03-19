@@ -1,0 +1,31 @@
+.jBtnGroup{
+    margin-top: 9rem;
+}
+#jBtn1{
+    border: none;
+    padding: 7px;
+    font-size: large;
+    border-radius: .5rem;
+    font-weight: 500;
+    background-color: rgb(177, 236, 255);
+}
+#jBtn2{
+    border: none;
+    padding: 7px;
+    font-size: large;
+    border-radius: .5rem;
+    font-weight: 500;
+    background-color: gold;
+}
+.jBtnGroup input{
+    padding: 5px;
+}
+#joinBtn{
+    border: none;
+    padding: 5px;
+    width: 5rem;
+    font-size: large;
+    border-radius: .5rem;
+    font-weight: 500;
+    background-color: lightslategray;
+}

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
+import { SendBox } from "../../../components/component"
 import { UserData } from "../../../Routes/PageRoutes"
-
+import './message.css'
 
 export default function InputMessage({socket}){
     const [messageList,setmessageList]=useState([])
@@ -30,36 +31,42 @@ export default function InputMessage({socket}){
             setmessageList((list)=>[...list,data])
         })
     },[socket])
+
+
     return (
-        <div className="mbs">
+        <div className="inputBox mbs">
             
             {
                 messageList?
                 <>
                     {
                         messageList.map((data,index)=>{
-                            return (
-                                <div  id={state.email===data.email?"you":"other"} key={index}>
-                                    <div id="jvdj">
-                                    <div id="name">{state.email===data.email?"You":data.name}</div>
-                                    {data.currMsg}
-                                    <div id="time">{data.time}</div>
+
+                            if(state.email!==data.email){
+                                return (
+                                    <div className="container" key={index}>
+                                        <img src={`https://avatars.dicebear.com/api/initials/:${data.name}.svg`} alt="Avatar" style={{width:'100%'}}/>
+                                        <p>{data.currMsg}</p>
+                                        <span className="time-right">{data.time}</span>
                                     </div>
-                                </div>
-                            )
+                                )
+                            }
+                            else{
+                                return(
+                                    <div className="container darker" key={index}>
+                                        <img src={`https://avatars.dicebear.com/api/initials/:${data.name}.svg`} alt="Avatar" className="right" style={{width:'100%'}}/>
+                                        <p>{data.currMsg}</p>
+                                        <span className="time-left">{data.time}</span>
+                                    </div>
+                                )
+                            }
                         })
                     }
-                    
                 </>:
-                <div></div>
+                <div>Loading...</div>
             }
             
-            <center className="fixed-bottom bfbvc">
-                <input type='text' id='chatText' value={sendMsg} placeholder="Type a message"  onChange={(e)=>changeMsg(e)}/>
-                <span>
-                    <button type='button' onClick={sendMessage}>&#10148;</button>
-                </span>
-            </center>
+            <SendBox value={sendMsg} onChange={(e)=>changeMsg(e)} onClick={sendMessage}/>
         </div>
     )
 

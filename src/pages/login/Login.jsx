@@ -1,4 +1,4 @@
-
+import './login.css'
 
 import React, { useContext, useRef, useState } from 'react'
 import { UserData } from '../../Routes/PageRoutes'
@@ -40,24 +40,25 @@ export default function Login({socket}) {
         setJoinRoom(chatroom)
     }
     return (
-        <div className='mt-5'>
-            <center>
+        <div className='mt-3'>
+            <h1 style={{textAlign:'center'}}>BartaChat</h1>
+            <center className='jBtnGroup'>
                 {
                     joinRoom==="join_new"?
                     <>
-                        <div className='mt-2'>
+                        <div>
                             <input type='text' ref={name} placeholder='Enter Your name'/>
                         </div>
                         <div className='mt-2'>
                             <input type='email' ref={email} placeholder='Enter Your e-mail'/>
                         </div>
                         <div className='mt-3'>
-                            <button type='submit' onClick={joinNewChat}>Join</button>
+                            <button type='submit' onClick={joinNewChat} id='joinBtn'>Join</button>
                         </div>
                     </>:
                     joinRoom==="join_code"?
                     <>
-                        <div className='mt-2'>
+                        <div>
                             <input type='text' ref={name} placeholder='Enter Your name'/>
                         </div>
                         <div className='mt-2'>
@@ -67,12 +68,12 @@ export default function Login({socket}) {
                             <input type='text' ref={roomId} placeholder='Enter join code'/>
                         </div>
                         <div className='mt-3'>
-                            <button type='submit' onClick={joinWithId}>Join</button>
+                            <button type='submit' onClick={joinWithId} id='joinBtn'>Join</button>
                         </div>
                     </>:
                     <>
-                        <div><button type='button' onClick={()=>newRoom("join_new")}>New chat room</button></div>
-                        <div className='mt-3'><button type='button' onClick={()=>codeJoin("join_code")}>Join with a code</button></div>
+                        <div><button type='button' id='jBtn1' onClick={()=>newRoom("join_new")}>New chat room</button></div>
+                        <div className='mt-3'><button type='button' id='jBtn2' onClick={()=>codeJoin("join_code")}>Join with a code</button></div>
                     </>
                 }
                 

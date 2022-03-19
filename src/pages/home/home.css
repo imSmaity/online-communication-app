@@ -5,73 +5,82 @@
   margin: 2vh 2vh 2vh 2vh;
   position: fixed;
   width: 605px;
+  padding-bottom: 5rem;
   overflow-y: auto;
 }
 .bdv{
-  margin-left: 2vh;
+  margin-left: 3vh;
   border: none;
-  background-color: darkgray;
+  background-color: lightgreen;
+  padding: 4px;
+  font-weight: bold;
+  width: 10vh;
+  border-radius: 5px;
 }
 .bdv:hover{
-  background-color: goldenrod;
+  background-color: red;
 }
-.bfbvc{
-  margin-bottom: 4vh;
-}
+
 
 .vncvn{
   text-align: right;
 }
-#you{
-  text-align: right;
-  margin-top: 1vh;
-  margin-bottom: 5vh;
-}
-#other{
-  text-align: left;
-  margin-top: 2vh;
-  margin-bottom: 5vh;
-  
-}
-#name{
-  font-size: 11px;
-  color: darkgray;
-  margin-bottom: -1.2vh;
-}
-#time{
-  font-size: 11px;
-  color: darkgray;
-  margin-top: -1.5vh;
-}
+
+
 #code{
   margin-left: 3vh;
 }
-#uname{
-  font-weight: bold;
-  margin-left: 5vh;
-}
+
+
 #rid{
-  border: 1px solid black;
+  border: 1px solid lightblue;
+  outline: none;
   border-radius: 1vh;
   padding: .5vh;
   width: 35vh;
   margin-top: 1vh;
 }
+
+#sendBtn{
+  padding: 4px;
+  width: 3rem;
+  background-color: rgb(157, 245, 157);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
 @media only screen and (max-width: 1100px) {
   .mbs{
-    height: 92vh;
     width: 600px;
   }
 }
 @media only screen and (max-width: 800px) {
   .mbs{
-    height: 94vh;
     width: 600px;
   }
 }
 @media only screen and (max-width: 500px) {
   .mbs{
-    height: 94vh;
     width: 340px;
   }
+}
+
+.container2 img {
+  float: left;
+  max-width: 35px;
+  width: 100%;
+  margin-right: 5rem;
+  border-radius: 50%;
+  margin-top: .3rem;
+}
+.container2 img.right {
+  float: right;
+}
+.dotIcon:after{
+    
+  content: '\2807';
+  font-size: 3.5vh;
+  color: rgb(107, 107, 107);
+  text-align: left;
+  padding: 2vh;
 }

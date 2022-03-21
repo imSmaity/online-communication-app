@@ -1,3 +1,9 @@
 .bm{
-  margin-bottom: 2vh;
+  margin-bottom: 7vh;
+}
+
+#chatText{
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0.274);
+  border: 1px solid gray;
 }

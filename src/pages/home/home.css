@@ -1,5 +1,6 @@
 .mbs{
-  border: 1px solid black;
+  border: 2px solid gray;
+  border-radius: 5px;
   height: 90vh;
   padding: 2vh;
   margin: 2vh 2vh 2vh 2vh;
@@ -7,7 +8,9 @@
   width: 605px;
   padding-bottom: 5rem;
   overflow-y: auto;
+  overflow-x: hidden;
 }
+
 .bdv{
   margin-left: 3vh;
   border: none;
@@ -44,19 +47,28 @@
 #sendBtn{
   padding: 4px;
   width: 3rem;
-  background-color: rgb(157, 245, 157);
+  background-color: rgb(71, 247, 71);
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
+  border: none;
 }
 
+@media only screen and (max-width: 1200px) {
+  .ex-code{
+    display: none;
+  }
+}
 @media only screen and (max-width: 1100px) {
+  .ex-code{
+    display: none;
+  }
   .mbs{
     width: 600px;
   }
 }
 @media only screen and (max-width: 800px) {
   .mbs{
-    width: 600px;
+    width: 550px;
   }
 }
 @media only screen and (max-width: 500px) {
@@ -83,4 +95,7 @@
   color: rgb(107, 107, 107);
   text-align: left;
   padding: 2vh;
+}
+#join{
+  font-size: small;
 }

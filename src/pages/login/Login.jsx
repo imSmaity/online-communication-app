@@ -14,10 +14,10 @@ export default function Login({socket}) {
     function joinNewChat(){
         if(name.current.value !=="" && email.current.value!=="" && socket.id !== ""){
             socket.connect()
-            dispatch({type:"USER",name:name.current.value,email:email.current.value,room:socket.id+"s",payload:true})
+            dispatch({type:"USER",name:name.current.value,email:email.current.value,room:socket.id===undefined?"9w0YjKtB7FaYJC1uA$AVs":socket.id+"s",payload:true})
             socket.emit("join_chat",{
                 name:name.current.value,
-                room:socket.id+"s"
+                room:socket.id===undefined?"9w0YjKtB7FaYJC1uA$AVs":socket.id+"s"
             })
         }
         

@@ -1,4 +1,23 @@
-# BartaServer
+# BartaChat
+
+A chatting app made with MERN stack.
+## Screenshot
+![alt-text](https://i.ibb.co/Fm9fnZz/Screenshot-574.png)
+
+## Features
+- Authentication
+  - New chat room/Join with a code
+- Copy join code
+- Type messages
+- Send messages
+- Fast message delivered
+- Group chatting
+- Send and recive messages displayed
+- Leave to the chat room
+
+
+## More
+Backend of this project can be found [here](https://github.com/imSmaity/barta-server)
 
 # Getting Started with Create React App
 

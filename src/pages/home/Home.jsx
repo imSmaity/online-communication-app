@@ -31,7 +31,7 @@ const InputElement=()=>{
                                 </div>
                                 <div className="col-xl-5 ex-code">
                                     <span title='Join Code'>
-                                        <input type={'text'} value={state.room===undefined?'9w0YjKtB7FaYJC1uA$AVs':state.room}  id='rid' readOnly/>
+                                        <input type={'text'} value={state.room}  id='rid' readOnly/>
                                     </span>
                                 </div>
                                 <div className='col-xl-3 col-4 container2'>
@@ -39,7 +39,7 @@ const InputElement=()=>{
                                 </div>
                                 <div className="col-2 dropdown">
                                     <button type='button' className="dotIcon" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
-                                    <Popup value={state.room===undefined?'9w0YjKtB7FaYJC1uA$AVs':state.room}/>
+                                    <Popup value={state.room}/>
                                 </div>
                             </div>
                         </div>
